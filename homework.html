@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body,html {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+        }
+        .container {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child {
+            border: 1px solid black;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child">
+            <p>Input name here...</p>
+            <input type="text" placeholder="Enter text" onblur="getInp()">
+            <br>
+            <button onclick="">send</button>
+        </div>  
+    </div>
+
+    <script>
+        function getInp() {
+        const inputVal = document.querySelector('input').value;
+        alert("Hello " + inputVal +", Welcome to my site!");
+        }
+    </script>
+</body>
+</html>
